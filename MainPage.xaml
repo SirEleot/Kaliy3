@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Kaliy3"
+             x:Class="Kaliy3.MainPage"
+             Title="Пто Калий 3">
+    
+    
+    <StackLayout>
+        <Button Text="Справка" VerticalOptions="StartAndExpand" HorizontalOptions="Fill" Clicked="BtnSpravka_click"></Button>
+    </StackLayout>
+
+</ContentPage>

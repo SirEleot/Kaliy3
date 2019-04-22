@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kaliy3.Spravka">
+    <ContentPage.Content>
+        <StackLayout Padding="15,15,15,15">
+            <StackLayout Orientation="Horizontal" Margin="10,10,10,10">
+                <Label Text="Текущая дата: "
+                VerticalOptions="Fill" 
+                HorizontalOptions="StartAndExpand" />
+                <Label Text=""
+                x:Name="DateTime"
+                VerticalOptions="Fill" 
+                HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+            <Entry 
+                HorizontalTextAlignment="Center"
+                Margin="10,10,10,10"
+                Keyboard="Numeric"
+                Placeholder="Номер поезда"
+                x:Name="EntryTrailNumber" 
+                HorizontalOptions="Fill" 
+                VerticalOptions="Start" 
+                MaxLength="4" 
+                Completed="TrailNumber_completed" />
+            <StackLayout  Orientation="Horizontal" Margin="10,10,10,10">
+                <Entry 
+                 HorizontalTextAlignment="Center"
+                    Keyboard="Numeric" 
+                    x:Name="EntryLadenWagon" 
+                    Placeholder="Груженые" 
+                    HorizontalOptions="StartAndExpand" 
+                    VerticalOptions="Fill"
+                    MaxLength="2" 
+                    Completed="LadenWagon_completed" />
+                <Entry 
+                    HorizontalTextAlignment="Center"
+                    Keyboard="Numeric" 
+                    x:Name="EntryEmptyWagon" 
+                    Placeholder="Порожние" 
+                    HorizontalOptions="EndAndExpand" 
+                    VerticalOptions="Fill" 
+                    MaxLength="2" 
+                    Completed="EmptyWagon_completed" />
+            </StackLayout>
+            <Entry 
+                HorizontalTextAlignment="Center"
+                Margin="10,10,10,10"
+                Keyboard="Numeric"
+                Placeholder="Вес"
+                x:Name="EntryTrailWeight" 
+                HorizontalOptions="Fill" 
+                VerticalOptions="Start" 
+                MaxLength="4" 
+                Completed="TrailWeight_completed" />
+            <Entry 
+                HorizontalTextAlignment="Center"
+                Margin="10,10,10,10"
+                Keyboard="Numeric"
+                Placeholder="Хвостовой"
+                x:Name="EntryLastWagonNumber"
+                HorizontalOptions="Fill" 
+                VerticalOptions="Start" 
+                MaxLength="8" />
+            <Button Text="Посчитать" Clicked="Calculate_click" VerticalOptions="Start" HorizontalOptions="Center" Margin="10,10,10,10"/>
+            <Button Text="Сбросить" Clicked="Reset_click" VerticalOptions="Start" HorizontalOptions="Center" Margin="10,10,10,10"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
